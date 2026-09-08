@@ -1,0 +1,17 @@
+/target
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Rust
+*.rs.bk
+
+# Local Enviroment
+.env
+.env.*
+!.env.example
