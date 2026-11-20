@@ -1,0 +1,31 @@
+[package]
+name = "kyouzai-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "kyouzai"
+path = "src/main.rs"
+
+[dependencies]
+kyouzai-core = { path = "../kyouzai-core" }
+kyouzai-platform = { path = "../kyouzai-platform" }
+kyouzai-renderer = { path = "../kyouzai-renderer" }
+kyouzai-asset = { path = "../kyouzai-asset" }
+
+pollster.workspace = true
+glam.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+directories.workspace = true
+tray-icon.workspace = true
+# Only for decoding the embedded tray icon PNG (see tray.rs) — the pet spritesheet
+# pipeline goes through kyouzai-asset instead, which already wraps this crate.
+image.workspace = true
+ico.workspace = true
+
+[build-dependencies]
+winresource = "0.1"

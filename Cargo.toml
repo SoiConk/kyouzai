@@ -1,5 +1,32 @@
 [workspace]
 resolver = "3"
-members = [
-	"crates/*",
-]
+members = ["crates/*"]
+exclude = ["crates/kyouzai-hub"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+license = "MIT"
+
+[workspace.dependencies]
+# Versions below are pinned to the newest release of each crate verified against this
+# codebase's actual usage (checked by downloading and reading the real source of each,
+# since this environment has no Rust toolchain to compile-check against). See the
+# per-crate comments in kyouzai-renderer for the wgpu 30 migration notes specifically —
+# it introduced several breaking API changes since the version this project started on.
+winit = "0.30"
+raw-window-handle = "0.6"
+wgpu = "30.0"
+bytemuck = { version = "1.25", features = ["derive"] }
+pollster = "1.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+glam = "0.33"
+image = "0.25"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+directories = "6.0"
+tray-icon = "0.24"
+thiserror = "2"
+rand = "0.10.4"
+ico = "0.4"

@@ -1,0 +1,45 @@
+{
+  "id": "kyouzai",
+  "name": "Kyouzai",
+  "spritesheet": "spritesheet.png",
+  "grid_columns": 6,
+  "grid_rows": 2,
+  "sprite_size": [128, 128],
+  "walk_speed": 60.0,
+  "states": {
+    "idle": {
+      "range": {
+        "row": 0,
+        "start": 0,
+        "count": 4
+      },
+      "fps": 6.0
+    },
+    "walk": {
+      "range": {
+        "row": 1,
+        "start": 0,
+        "count": 6
+      },
+      "fps": 10.0
+    },
+    "sleep": {
+      "frames": [
+        [4, 0],
+        [5, 0]
+      ],
+      "fps": 0.5
+    },
+    "grabbed": {
+      "frames": [[0, 0]],
+      "fps": 1.0
+    },
+    "falling": {
+      "frames": [
+        [4, 0],
+        [5, 0]
+      ],
+      "fps": 4.0
+    }
+  }
+}
