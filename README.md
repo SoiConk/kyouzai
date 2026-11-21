@@ -14,19 +14,13 @@ The project aims to provide a lightweight foundation for desktop companions, wit
 
 ## Features
 
-- Desktop Companion — Displays an animated 2D companion sprits on the desktop.
+- Displays a single animated 2D pet directly on the desktop.
 
-- Transparent Window — Renders the companion without a conventional window background or decorations.
+- Uses a transparent, borderless, always-on-top window, with application controls accessible through the system tray.
 
-- Always on Top — Keeps the companion above other windows.
+- Supports basic mouse interaction, including waking, grabbing and dragging the companion.
 
-- Interactive Behavior — Supports mouse interaction with the companion.
-
-- System Tray — Provides basic application controls through the system tray.
-
-- Persistent State — Saves application state across sessions.
-
-- Modular Architecture — Separates application logic, platform integration, asset handling, and rendering into dedicated crates.
+- Provides some simple companion states at the moment, including Idle, Walking, Sleeping, Dragging, and Falling.
 
 ---
 
@@ -69,18 +63,18 @@ The application crate acts as the composition root, connecting the core logic wi
 
 ### Prerequisites
 
-- Windows 10 or later.
+- Windows SDK 10 or later.
 
-- Rust (stable toolchain).
+- Rust stable toolchain.
 
-- Microsoft C++ Build Tools with the MSVC toolchain.
+- Microsoft Visual Studio Build Tools 2022 or later
 
 - A graphics device with a supported graphics backend.
 
 ### Clone the Repository
 
 ```
-git clone https://github.com/<username>/kyouzai.git
+https://github.com/SoiConk/kyouzai.git
 cd kyouzai
 ```
 
